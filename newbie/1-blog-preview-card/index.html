@@ -1,45 +1,61 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Blog preview card</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Frontend Mentor | Blog preview card</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style></style>
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style></style>
-</head>
+  <body>
+    <main class="course-card">
+      <img
+        class="course-card__img"
+        src="assets/images/illustration-article.svg"
+        alt="cover image"
+      />
 
-<body>
-  <main class="course-card">
-    <img class="course-card__img" src="assets/images/illustration-article.svg" alt="cover image" />
+      <div class="course-card__content">
+        <span class="course-card__badge">Learning</span>
+        <p class="course-card__date">Published 21 Dec 2023</p>
+        <h2 class="course-card__title">HTML & CSS foundations</h2>
+        <p class="course-card__description">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
 
-    <div class="course-card__content">
-      <span class="course-card__badge">Learning</span>
-      <p class="course-card__date">Published 21 Dec 2023</p>
-      <h2 class="course-card__title">HTML & CSS foundations</h2>
-      <p class="course-card__description">
-        These languages are
-        the backbone of every website, defining structure, content, and
-        presentation.
-      </p>
-
-      <div class="course-card__instructor">
-        <img class="course-card__instructor-img" src="assets/images/image-avatar.webp" alt="profile instructor image">
-        <p class="course-card__instructor-name">Greg Hooper</p>
+        <div class="course-card__instructor">
+          <img
+            class="course-card__instructor-img"
+            src="assets/images/image-avatar.webp"
+            alt="profile instructor image"
+          />
+          <p class="course-card__instructor-name">Greg Hooper</p>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="attribution">
-    Challenge by
-    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
-      href="https://github.com/ikram-muhr/fm-blog-preview-card-ikrammuhr" target="_blank">Ikram Muhr</a>.
-  </footer>
-</body>
-
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/ikram-muhr/frontend-mentor-challenges/tree/main/newbie/1-blog-preview-card"
+        target="_blank"
+        >Ikram Muhr</a
+      >.
+    </footer>
+  </body>
 </html>
