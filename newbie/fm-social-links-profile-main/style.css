@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* reset css to make it easier to manage */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* color variable from style guide */
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+html {
+  font-size: 14px;
+  font-family: "inter", sans-serif;
+  background-color: var(--Grey-900);
+  color: var(--White);
+}
+
+.card-social {
+  width: 400px;
+  min-width: 370px;
+  background-color: var(--Grey-800);
+  padding: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-social__img {
+  border-radius: 100%;
+  width: 7rem;
+  margin-bottom: 1rem;
+}
+
+.card-social__name {
+  margin-bottom: -0.5rem;
+  font-weight: 700;
+  font-size:x-large;
+}
+
+.card-social__address {
+  color: var(--Green);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.card-social__description {
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+.card-social__link-lists {
+  list-style: none;
+  width: 100%;
+}
+
+.card-social__link-lists li {
+  background-color: var(--Grey-700);
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.card-social__link-lists li:hover {
+  background-color: var(--Green);
+  color: var(--Grey-700);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*
+Responsive for mobile design.
+I try to ensure that when on a small screen the content is not too full according to the design example.
+*/
+@media (max-width: 375px) {
+  .card-social {
+    width: 320px;
+    min-width: 320px;
+    padding: 1.5rem;
+  }
+}

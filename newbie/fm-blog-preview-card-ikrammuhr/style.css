@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* reset css to make it easier to manage */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: hsl(47, 88%, 63%);
+  font-family: "figtree", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.course-card {
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid black;
+  box-shadow: 0.5rem 0.5rem;
+  max-width: 375px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.course-card__img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-card__badge {
+  color: hsl(0, 0%, 7%);
+  background-color: hsl(47, 88%, 63%);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.course-card__date {
+  margin: 1.5rem 0;
+  font-weight: 500;
+}
+
+.course-card__title {
+  color: hsl(0, 0%, 7%);
+  margin-bottom: 1rem;
+}
+
+.course-card__title:hover {
+  color: hsl(47, 88%, 63%);
+  cursor: pointer;
+}
+
+.course-card__description {
+  margin-bottom: 1.5rem;
+  color: hsl(0, 0%, 42%);
+  font-weight: 500;
+}
+
+.course-card__instructor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.course-card__instructor-img {
+  width: 2.5rem;
+}
+
+.course-card__instructor-name {
+  font-size: small;
+  font-weight: 800;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*
+Responsive for mobile design.
+I try to ensure that when on a small screen the content is not too full according to the design example.
+*/
+@media (max-width: 375px) {
+  .course-card {
+    max-width: 325px;
+  }
+
+  .course-card__title {
+    font-size: 1.25rem;
+  }
+}

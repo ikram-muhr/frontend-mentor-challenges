@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main class="preview-card">
+      <!-- Responsive images use the picture tag. Suitable for use according to style guide -->
+      <picture class="preview-card__product-img">
+        <source
+          media="(min-width:550px)"
+          srcset="images/image-product-desktop.jpg"
+        />
+        <img src="images/image-product-mobile.jpg" alt="Product Image" />
+      </picture>
+      
+      <div class="preview-card__content">
+        <p class="preview-card__content__product-category">Perfume</p>
+        <p class="preview-card__content__product-name">
+          Gabrielle Essence Eau De Parfum
+        </p>
+        <p class="preview-card__content__product-description">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="preview-card__content__price-container">
+          <p class="preview-card__content__price-after-discount">$149.99</p>
+          <p class="preview-card__content__price-before-discount">$169.99</p>
+        </div>
+        <div class="preview-card__content__cart-container">
+          <img
+            class="preview-card__content__cart-icon"
+            src="images/icon-cart.svg"
+            alt="Cart Icon"
+          />
+          <p>Add to Cart</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Ikram-Muhr</a>.
+    </footer>
+  </body>
+</html>

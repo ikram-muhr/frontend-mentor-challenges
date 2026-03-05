@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* reset css to make it easier to manage */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* color variable from style guide */
+:root {
+  --clr-primary-green-500: hsl(158, 36%, 37%);
+  --clr-primary-green-700: hsl(158, 42%, 18%);
+  --clr-neutral-black: hsl(212, 21%, 14%);
+  --clr-neutral-grey: hsl(228, 12%, 48%);
+  --clr-neutral-cream: hsl(30, 38%, 92%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --ff-accent: "Fraunces", sans-serif;
+  --ff-base: "Montserrat", sans-serif;
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+html {
+  font-size: 14px;
+  font-family: var(--ff-accent);
+  background-color: var(--clr-neutral-cream);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1rem;
+}
+
+.preview-card {
+  max-width: 550px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--clr-neutral-white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.preview-card__product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-card__content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--clr-neutral-grey);
+}
+
+.preview-card__content__product-category {
+  font-family: var(--ff-base);
+  letter-spacing: 4px;
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+}
+
+.preview-card__content__product-name {
+  color: var(--clr-neutral-black);
+  font-size: xx-large;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+}
+
+.preview-card__content__product-description {
+  line-height: 1.5;
+}
+
+.preview-card__content__price-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.preview-card__content__price-after-discount {
+  font-size: xx-large;
+  color: var(--clr-primary-green-500);
+  font-weight: var(--fw-bold);
+}
+
+.preview-card__content__price-before-discount {
+  text-decoration: line-through;
+}
+
+.preview-card__content__cart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--clr-primary-green-500);
+  color: var(--clr-neutral-cream);
+  font-weight: var(--fw-bold);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.preview-card__content__cart-container:hover {
+  background-color: var(--clr-primary-green-700);
+}
+
+/*
+Responsive for mobile design.
+I try to ensure that when on a small screen the content is not too full according to the design example.
+*/
+@media (max-width: 550px) {
+  .preview-card {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
+}
