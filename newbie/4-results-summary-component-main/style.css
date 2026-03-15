@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* reset css to make it easier to manage */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* color variable from style guide */
+:root {
+  --clr-primary-light-red: hsl(0, 100%, 67%);
+  --clr-primary-orangey-yellow: hsl(39, 100%, 56%);
+  --clr-primary-green-teal: hsl(166, 100%, 37%);
+  --clr-primary-cobalt-blue: hsl(234, 85%, 45%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-pale-blue: hsl(221, 100%, 96%);
+  --clr-neutral-light-lavender: hsl(241, 100%, 89%);
+  --clr-neutral-dark-gray-blue: hsl(224, 30%, 27%);
+  --gradients-light-slate-blue: hsl(252, 100%, 67%);
+  --gradients-light-royal-blue: hsl(241, 81%, 54%);
+  --gradients-violet-blue: hsla(256, 72%, 46%, 1);
+  --gradients-persian-blue: hsla(241, 72%, 46%, 0);
+  --ff-regular: "Hanken Grotesk", sans-serif;
+  --fw-light: 500;
+  --fw-medium: 700;
+  --fw-bold: 800;
+}
+
+html {
+  font-family: var(--ff-regular);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--clr-neutral-pale-blue);
+}
+
+.red {
+  color: var(--clr-primary-light-red);
+}
+
+.yellow {
+  color: var(--clr-primary-orangey-yellow);
+}
+
+.green {
+  color: var(--clr-primary-green-teal);
+}
+
+.blue {
+  color: var(--clr-primary-cobalt-blue);
+}
+
+.bg-red {
+  background-color: #ff575710;
+}
+
+.bg-yellow {
+  background-color: #ffb01f10;
+}
+
+.bg-green {
+  background-color: #00bd9110;
+}
+
+.bg-blue {
+  background-color: #00bd9110;
+}
+
+.txt-light-lavender {
+  color: var(--clr-neutral-light-lavender);
+}
+
+.txt-medium {
+  font-weight: var(--fw-medium);
+}
+
+.txt-bold {
+  font-weight: var(--fw-bold);
+}
+
+.percentage {
+  color: var(--clr-neutral-dark-gray-blue);
+}
+
+.result-card-container {
+  background-color: var(--clr-neutral-white);
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 40rem;
+}
+
+.result-card-container > * {
+  flex: 1;
+  padding: 2rem;
+}
+
+.result-card-point {
+  background-color: var(--gradients-light-royal-blue);
+  color: var(--clr-neutral-white);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.circle {
+  width: 10rem;
+  height: 10rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to bottom,
+    var(--gradients-violet-blue),
+    var(--gradients-persian-blue)
+  );
+
+  p {
+    font-weight: 800;
+    font-size: 4em;
+  }
+
+  span {
+    font-size: 1rem;
+  }
+}
+
+.result-card-text {
+  text-align: center;
+  padding-inline: 1.2rem;
+}
+
+.summary-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.summary-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.summary-list-container > * {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  font-size: small;
+}
+
+.summary-list-container > * p:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: var(--clr-neutral-dark-gray-blue);
+  color: var(--clr-neutral-white);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--gradients-light-royal-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 480px) {
+  body {
+    height: auto;
+  }
+  .result-card-container {
+    flex-direction: column;
+    border-radius: 0;
+  }
+
+  .result-card-point {
+    border-radius: 0;
+    border-end-start-radius: 2rem;
+    border-end-end-radius: 2rem;
+  }
+}
